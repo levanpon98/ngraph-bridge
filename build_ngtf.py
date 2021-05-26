@@ -54,7 +54,7 @@ def main():
     '''
 
     # Component versions
-    tf_version = "v2.4.1"
+    tf_version = "v2.3.0"
     use_intel_tf = False
     openvino_version = "releases/2021/2"
 
@@ -209,7 +209,7 @@ def main():
 
     # Setup the virtual env
     setup_venv(venv_dir)
-
+    
     target_arch = 'native'
     if (arguments.target_arch):
         target_arch = arguments.target_arch

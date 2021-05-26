@@ -50,7 +50,7 @@ ADD https://github.com/bazelbuild/bazelisk/releases/download/v1.7.4/bazelisk-lin
 RUN chmod +x /opt/bazelisk/bazelisk-linux-amd64 && ln -s /opt/bazelisk/bazelisk-linux-amd64 /usr/local/bin/bazel
 RUN bazel
 
-RUN git clone -b ${NGRAPH_TF_VERSION} https://github.com/tensorflow/ngraph-bridge.git /ngraph-bridge
+RUN git clone https://github.com/levanpon98/ngraph-bridge.git /ngraph-bridge
 
 WORKDIR /ngraph-bridge
 RUN echo "Using build options: $build_options" && python3 ./build_ngtf.py $build_options
